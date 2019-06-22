@@ -1,10 +1,11 @@
+package it.academy;
 
 /**
  * Main class to start
  * a tic tac toe game
  * 
  * @author Roberto Cella
- * 		   Ludovica Sestu
+ *         Ludovica Sestu
  * 
  */
 public class Main {
