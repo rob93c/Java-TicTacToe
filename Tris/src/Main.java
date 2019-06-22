@@ -1,5 +1,3 @@
-package it.academy;
-
 /**
  * Main class to start
  * a tic tac toe game
@@ -13,26 +11,21 @@ public class Main {
 	public static void main(String[] args) {
 		Grid game = new Grid();
 	
-		while(game.checkEnd() == 0) {
+		while(game.checkEnd() == 0) { // no winner yet
 			System.out.println("Player " + ((game.getMove() % 2) + 1) + 
 								", choose where to place your symbol:");
 			game.getChoice();
-			System.out.println("\n" +
-					game.getGrid()[0][0] + "|" +
-					game.getGrid()[0][1] + "|" +
-					game.getGrid()[0][2] + "\n" +
-					game.getGrid()[1][0] + "|" +
-					game.getGrid()[1][1] + "|" +
-					game.getGrid()[1][2] + "\n" +
-					game.getGrid()[2][0] + "|" +
-					game.getGrid()[2][1] + "|" +
-					game.getGrid()[2][2] + "\n"
-					);
+			System.out.println(
+				"\n\t" + game.getGrid()[0][0] + "|" + game.getGrid()[0][1] + "|" + game.getGrid()[0][2] + 
+				"\n\t" + game.getGrid()[1][0] + "|" + game.getGrid()[1][1] + "|" + game.getGrid()[1][2] + 
+				"\n\t" + game.getGrid()[2][0] + "|" + game.getGrid()[2][1] + "|" + game.getGrid()[2][2] + 
+				"\n"
+				);
 			}
-		if(game.checkEnd() == 1) {
+		if(game.checkEnd() == 1) { // game tied
 			System.out.println("The game ended in a draw.");
 		}
-		if(game.checkEnd() == 2) {
+		if(game.checkEnd() == 2) { // someone won
 			System.out.println("Good job Player " + 
 					(((game.getMove() - 1) % 2) + 1) 
 					+ ", you won!");

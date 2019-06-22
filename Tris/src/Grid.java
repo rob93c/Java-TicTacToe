@@ -1,5 +1,3 @@
-package it.academy;
-
 import java.util.Scanner;
 
 /**
@@ -7,7 +5,7 @@ import java.util.Scanner;
  * a tic tac toe grid
  * 
  * @author Roberto Cella,
- *         Ludovica Sestu
+ * 		   Ludovica Sestu
  *
  */
 public class Grid {
@@ -96,3 +94,4 @@ public class Grid {
 		return 0;
 	}
 }
+ 
